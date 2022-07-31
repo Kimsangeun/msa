@@ -12,18 +12,28 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      # 공통으로 실행되는 filter를 설정할때에는 global filter 로 설정해준다
+      # global filter를 설정하면 프로세스에서 가장 먼저 실행되고 가장 나중에 실행된다.
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: String Cloud Gateway GlobalFilter
+            preLogger: true
+            postLogger: true
       routes:
         - id: first-service
           uri: http://localhost:8081/
           predicates: # 조건
             - Path=/first-service/**
           filters:
-            - AddRequestHeader=first-request, first-request-header
-            - AddResponseHeader=first-response, first-response-header
+#            - AddRequestHeader=first-request, first-request-header
+#            - AddResponseHeader=first-response, first-response-header
+            - CustomFilter
         - id: second-service
           uri: http://localhost:8082/
           predicates: # 조건
             - Path=/second-service/**
           filters:
-            - AddRequestHeader=second-request, second-request-header
-            - AddResponseHeader=second-response, second-response-header
+#            - AddRequestHeader=second-request, second-request-header
+#            - AddResponseHeader=second-response, second-response-header
+            - CustomFilter
