@@ -3,9 +3,10 @@ server:
 
 eureka:
   client:
-    fetch-registry: false
-    register-with-eureka: false
-    default-zone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
 
 spring:
   application:
@@ -22,7 +23,8 @@ spring:
             postLogger: true
       routes:
         - id: first-service
-          uri: http://localhost:8081/
+#          uri: http://localhost:8081/
+          uri: lb://MY-FIRST-SERVICE # eureka server에 정보 전달을 위한 주소
           predicates: # 조건
             - Path=/first-service/**
           filters: # 개별 custom filter를 작성
@@ -30,7 +32,8 @@ spring:
 #            - AddResponseHeader=first-response, first-response-header # 내장된 filter factory
             - CustomFilter # custom filter
         - id: second-service
-          uri: http://localhost:8082/
+#          uri: http://localhost:8082/
+          uri: lb://MY-SECOND-SERVICE # eureka server에 정보 전달을 위한 주소
           predicates: # 조건
             - Path=/second-service/**
           filters:

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21d29654-47be-4b4e-9c31-35d187d0188e" name="Changes" comment="spring cloud gateway GlobalFilter 예제 적용">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/example/gateway/filter/LoggingFilter.java" afterDir="false" />
+    <list default="true" id="21d29654-47be-4b4e-9c31-35d187d0188e" name="Changes" comment="spring cloud gateway, eureka 연동 예제">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-service/src/main/java/com/example/firstservice/FirstServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-service/src/main/java/com/example/firstservice/FirstServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/first-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second-service/src/main/java/com/example/secondservice/SecondServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/second-service/src/main/java/com/example/secondservice/SecondServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/second-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
       <recent name="com.example.secondservice.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GatewayApplication">
+  <component name="RunManager" selected="Application.FirstServiceApplication">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.eureka.EurekaApplication" />
       <module name="eureka" />
@@ -137,9 +141,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GatewayApplication" />
         <item itemvalue="Application.FirstServiceApplication" />
         <item itemvalue="Application.SecondServiceApplication" />
+        <item itemvalue="Application.GatewayApplication" />
         <item itemvalue="Application.EurekaApplication" />
         <item itemvalue="Application.UserServiceApplication" />
       </list>
@@ -196,8 +200,26 @@
       <option name="project" value="LOCAL" />
       <updated>1659279444266</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring cloud gateway LoggingFilter 예제 적용">
+      <created>1659281718112</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659281718112</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -217,7 +239,9 @@
     <MESSAGE value="spring cloud gateway 간단 예제 적용" />
     <MESSAGE value="spring cloud gateway, first-service, second-service 예제 적용" />
     <MESSAGE value="spring cloud gateway GlobalFilter 예제 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring cloud gateway GlobalFilter 예제 적용" />
+    <MESSAGE value="spring cloud gateway LoggingFilter 예제 적용" />
+    <MESSAGE value="spring cloud gateway, eureka 연동 예제" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring cloud gateway, eureka 연동 예제" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
