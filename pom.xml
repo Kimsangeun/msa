@@ -9,9 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>discoveryservice</module>
+        <module>eureka</module>
         <module>user-service</module>
         <module>gateway</module>
+        <module>first-service</module>
+        <module>second-service</module>
     </modules>
 
     <properties>
